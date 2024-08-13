@@ -1,0 +1,195 @@
+* {
+    background-color: #E5E5E5;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1.5s ease-in;
+}
+
+.logo-slide-in {
+    animation: slideInLeft 1.5s ease-out;
+}
+
+.content-slide-in {
+    animation: slideInRight 1.5s ease-out;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.LogoAlura {
+    width: 80px;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.input-section, .output-section {
+    width: 48%;
+    margin-bottom: 20px;
+}
+
+.text-area, .Mensagem {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #FFFFFF;
+    color: #0A3871;
+    text-transform: lowercase;
+    font-size: 20px;
+}
+
+::placeholder {
+    color: #0A3871;
+}
+
+.text-area:focus, .Mensagem:focus {
+    outline: none;
+}
+
+.Mensagem {
+    background-color: white;
+    border-radius: 24px;
+}
+
+.botoes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.btn-encrip, .btn-desencrip, .btn-copiar {
+    height: 50px;
+    border-radius: 24px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 32%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.btn-encrip {
+    background-color: #0A3871;
+    color: white;
+    border: none;
+}
+
+.btn-desencrip {
+    background-color: #D8DFE8;
+    color: #0A3871;
+    border: 1px solid #0A3871;
+}
+
+.btn-copiar {
+    background-color: white;
+    color: #0A3871;
+    border: 1px solid #0A3871;
+}
+
+@media screen and (max-width: 1024px) {
+    header {
+        margin-left: 10px;
+    }
+    .LogoAlura {
+        width: 60px;
+    }
+    main {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+    .input-section, .output-section {
+        width: 100%;
+    }
+    .text-area, .Mensagem {
+        height: 250px;
+    }
+    .botoes {
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn-encrip, .btn-desencrip, .btn-copiar {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .LogoAlura {
+        width: 50px;
+    }
+    .text-area, .Mensagem {
+        font-size: 16px;
+    }
+    .btn-encrip, .btn-desencrip, .btn-copiar {
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .text-area, .Mensagem {
+        font-size: 14px;
+        height: 200px;
+    }
+    .btn-encrip, .btn-desencrip, .btn-copiar {
+        height: 35px;
+        font-size: 14px;
+    }
+}
